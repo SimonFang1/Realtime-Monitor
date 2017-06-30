@@ -62,7 +62,7 @@ ProcessImage::ProcessImage(QWidget *parent):QWidget(parent)
     vLayout->addWidget(name5Label);
     QLabel *dateLabel = new QLabel("2017/06/25");
     vLayout->addWidget(dateLabel);
-    hLayout->addWidget(vLayout);
+    hLayout->addItem(vLayout);
     setLayout(hLayout);
     setWindowTitle(tr("Camera Monitor"));
 }
