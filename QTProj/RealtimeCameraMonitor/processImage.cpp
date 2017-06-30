@@ -49,6 +49,8 @@ ProcessImage::ProcessImage(QWidget *parent):QWidget(parent)
 
     QHBoxLayout *hLayout = new QHBoxLayout();
     hLayout->addWidget(label);
+    QLabel *nameLabel = new QLabel("Fang Ming");
+    hLayout->addWidget(nameLabel);
     setLayout(hLayout);
     setWindowTitle(tr("Capture"));
 }
