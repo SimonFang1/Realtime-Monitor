@@ -49,10 +49,22 @@ ProcessImage::ProcessImage(QWidget *parent):QWidget(parent)
 
     QHBoxLayout *hLayout = new QHBoxLayout();
     hLayout->addWidget(label);
-    QLabel *nameLabel = new QLabel("Fang Ming");
-    hLayout->addWidget(nameLabel);
+    QVBoxLayout *vLayout = new QVBoxLayout();
+    QLabel *name1Label = new QLabel("Leader: Ming Fang");
+    vLayout->addWidget(name1Label);
+    QLabel *name2Label = new QLabel("Member: Changqin Xie");
+    vLayout->addWidget(name2Label);
+    QLabel *name3Label = new QLabel("Member: Jiahao Xu");
+    vLayout->addWidget(name3Label);
+    QLabel *name4Label = new QLabel("Member: Qian Shu");
+    vLayout->addWidget(name4Label);
+    QLabel *name5Label = new QLabel("Member: Zhuojun Lu");
+    vLayout->addWidget(name5Label);
+    QLabel *dateLabel = new QLabel("2017/06/25");
+    vLayout->addWidget(dateLabel);
+    hLayout->addWidget(vLayout);
     setLayout(hLayout);
-    setWindowTitle(tr("Capture"));
+    setWindowTitle(tr("Camera Monitor"));
 }
 
 ProcessImage::~ProcessImage()
