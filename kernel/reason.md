@@ -246,6 +246,7 @@ OProfile评测和性能监控工具
 1.36、GCOV-based kernel profiling  
         [ ] Enable gcov-based kernel profiling 不选 
 
+
 2、Enable loadable module support   
 
 整个不选
@@ -265,3 +266,89 @@ OProfile评测和性能监控工具
 2.5 Source checksum for all modules 
 为所有的模块校验源码,如果你不是自己编写内核模块就不需要它这个功能是为了防止你在编译模块时不小心更改了内核模块的源代码但忘记更改版本号而造成版本冲突。如果不清楚，选N。 
 
+
+3、Enable the block layer  
+     块设备支持,使用硬盘/USB/SCSI设备者必选这选项使得块设备可以从内核移除。如果不选，那么 blockdev 文件将不可用，一些文件系统比如 ext3 将不可用。这个选项会禁止 SCSI 字符设备和 USB 储存设备，如果它们使用不同的块设备。选Y，除非你知道你不需要挂载硬盘和其他类似的设备。不过此项无可选项 
+ 
+3.1 Support for large (2TB+) block devices and files 
+仅在使用大于2TB的块设备时需要 
+
+不选
+ 
+3.2 Block layer SG support v4 
+通用scsi块设备第4版支持 
+选上
+ 
+3.3 Block layer data integrity support  
+块设备数据完整性支持 
+
+不选
+ 
+3.4 Block layer bio throttling support  
+可用于限制设备的IO速度 
+
+不选
+
+3.5 Partition Types 
+    Advanced partition selection 
+    如果你想要在linux上使用一个在其他的介质上运行着操作系统的硬盘时，选择Y，如果你不确定时可以选N 
+    
+不选
+ 
+3.6 IO Schedulers 
+    IO调度器I／O是输入输出带宽控制，主要针对硬盘，是核心的必须的东西。这里提供了三个IO调度器。 
+    
+    Deadline I/O scheduler  
+    使用轮询的调度器,简洁小巧,提供了最小的读取延迟和尚佳的吞吐量,特别适合于读取较多的环境(比如数据库)Deadline I／O调度器简单而又紧密，在性能上和抢先式调度器不相上下，在一些数据调入时工作得更好。至于在单进程I／O磁盘调度上，它的工作方式几乎和抢先式调度器相同，因此也是一个好的选择。 
+ 
+    CFQ I/O scheduler 
+    使用QoS策略为所有任务分配等量的带宽,避免进程被饿死并实现了较低的延迟,可以认为是上述两种调度器的折中.适用于有大量进程的多用户系统CFQ调度器尝试为所有进程提供相同的带宽。它将提供平等的工作环境，对于桌面系统很合适。 
+ 
+    Default I/O scheduler (CFQ) 
+    默认IO调度器我这样理解上面三个IO调度器： 
+    抢先式是传统的，它的原理是一有响应，就优先考虑调度。如果你的硬盘此时在运行一项工作，它也会暂停下来先响应用户。    期限式则是：所有的工作都有最终期限，在这之前必须完成。当用户有响应时，它会根据自己的工作能否完成，来决定是否响应用户。    CFQ则是平均分配资源，不管你的响应多急，也不管它的工作量是多少，它都是平均分配，一视同仁的。 
+    ( *) Deadline     
+    (  ) CFQ   
+    (  ) No-op 
+
+4、System Type
+未动
+
+5、FIQ Mode Serial Debugger
+不选
+
+6、Bus Support
+ PCCcard Support
+ 不选
+
+7、kernel Features
+未动
+
+8、Boot Options
+不选
+
+9、CPU Power Management
+ CPU Frequency scaling
+ CPU idle PM support
+ 都不选
+
+10、Floating point emulation 选一个
+VFP-format floating point maths
+
+11、userpace 
+
+12、power management options
+ 12.1 Suspend to ram and standly
+ 待机 选择
+ 
+ 12.2 Run-time PM core functionality
+ 不选
+
+ 12.3 power management debug support
+ 不选
+
+ 12.4 Advanced power management emulation
+ 选择
+
+ 12.5 Log time spend in suspend
+ 不选
