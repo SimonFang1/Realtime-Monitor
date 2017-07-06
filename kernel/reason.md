@@ -246,3 +246,22 @@ OProfile评测和性能监控工具
 1.36、GCOV-based kernel profiling  
         [ ] Enable gcov-based kernel profiling 不选 
 
+2、Enable loadable module support   
+
+整个不选
+
+2.1 Forced module loading  
+允许强制加载模块 
+ 
+2.2 Module unloading   
+允许卸载已经加载的模块 
+ 
+2.3 Forced module unloading 
+允许强制卸载正在使用中的模块(比较危险)这个选项允许你强行卸除模块，即使内核认为这不安全。内核将会立即移除模块，而不管是否有人在使用它（用 rmmod -f 命令）。这主要是针对开发者和冲动的用户提供的功能。如果不清楚，选N。 
+ 
+2.4 Module versioning support 
+有时候，你需要编译模块。选这项会添加一些版本信息，来给编译的模块提供独立的特性，以使不同的内核在使用同一模块时区别于它原有的模块。这有时可能会有点用。如果不清楚，选N。允许使用其他内核版本的模块(可能会出问题) 
+ 
+2.5 Source checksum for all modules 
+为所有的模块校验源码,如果你不是自己编写内核模块就不需要它这个功能是为了防止你在编译模块时不小心更改了内核模块的源代码但忘记更改版本号而造成版本冲突。如果不清楚，选N。 
+
