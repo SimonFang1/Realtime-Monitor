@@ -356,3 +356,40 @@ VFP-format floating point maths
 
  12.5 Log time spend in suspend
  不选
+ 
+ 13、networking System
+ 本次项目没有用到网络系统，所以基本上都不选
+ 13.1、Networking options   
+    [ ] Packet socket 
+    [ ] Unix domain sockets 
+    [ ] PF_KEY sockets 
+    [ ] TCP/IP networking 
+    < > DECnet Support 
+    < > ANSI/IEEE 802.2 LLC type 2 Support 
+    < > The IPX protocol 
+    < > Appletalk protocol support 
+    < > CCITT X.25 Packet Layer (EXPERIMENTAL) 
+    < > LAPB Data Link Driver (EXPERIMENTAL)   
+    < > Acorn Econet/AUN protocols (EXPERIMENTAL) 
+    < > WAN router 
+    < > Phonet protocols family 
+    < > IEEE Std 802.15.4 Low-Rate Wireless Personal Area Networks support (EXPERI│ 
+    [ ] QoS and/or fair queueing  --->    
+    通过IPRoute 切换网络设备上的Qos 策略，我不打算使用IP 路由 
+    [ ] Data Center Bridging support   
+    -*- DNS Resolver support 
+    < > B.A.T.M.A.N. Advanced Meshing Protocol   
+      Network testing  --->     
+ 
+13.2、[ ]   Amateur Radio support  ---> 
+13.3、< >   CAN bus subsystem support  --->   
+13.4、< >   IrDA (infrared) subsystem support  ---> 
+13.5、< >   Bluetooth subsystem support  --->   
+13.6、< >   RxRPC session sockets   
+13.7、- -   Wireless  --->      
+13.8、< >   WiMAX Wireless Broadband support  ---> 
+13.9、< >   RF switch subsystem support  ---> 
+13.10、< >   Plan 9 Resource Sharing Support (9P2000) (Experimental)  ---> 
+13.11、< >   CAIF support  --->   
+13.12、< >   Ceph core library (EXPERIMENTAL)   
+ 
