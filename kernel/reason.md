@@ -328,7 +328,11 @@ OProfile评测和性能监控工具
 不选
 
 9、CPU Power Management
+
+
  CPU Frequency scaling
+ 
+ 
  CPU idle PM support
  都不选
 
