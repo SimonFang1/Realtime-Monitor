@@ -312,19 +312,25 @@ OProfile评测和性能监控工具
 (  ) No-op 
 
 4、System Type
+
 未动
 
+
 5、FIQ Mode Serial Debugger
+
 不选
 
 6、Bus Support
  PCCcard Support
+
  不选
 
 7、kernel Features
+
 未动
 
 8、Boot Options
+
 不选
 
 9、CPU Power Management
@@ -334,6 +340,7 @@ OProfile评测和性能监控工具
  
  
  CPU idle PM support
+
  都不选
 
 10、Floating point emulation 选一个
@@ -343,21 +350,27 @@ VFP-format floating point maths
 
 12、power management options
  12.1 Suspend to ram and standly
+
  待机 选择
  
  12.2 Run-time PM core functionality
+
  不选
 
  12.3 power management debug support
+
  不选
 
  12.4 Advanced power management emulation
+
  选择
 
  12.5 Log time spend in suspend
+
  不选
  
  13、networking System
+
  本次项目没有用到网络系统，所以基本上都不选
  
  13.1、Networking options   
